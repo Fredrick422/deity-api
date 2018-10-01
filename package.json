@@ -1,0 +1,46 @@
+{
+  "name": "deity-academy-api",
+  "version": "1.0.0",
+  "adonis-version": "4.1.0",
+  "description": "An api for deity academy",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node ace test",
+    "redis": "redis-server --service-start",
+    "redis-stop": "redis-server --service-stop",
+    "api": "adonis serve --dev",
+    "app": "concurrently  \"npm run redis\" \"npm run api\""
+  },
+  "keywords": [
+    "Deity Academy API",
+    "Deity Academy App"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@adonisjs/ace": "^5.0.5",
+    "@adonisjs/auth": "^3.0.6",
+    "@adonisjs/bodyparser": "^2.0.4",
+    "@adonisjs/cors": "^1.0.6",
+    "@adonisjs/fold": "^4.0.9",
+    "@adonisjs/framework": "^5.0.8",
+    "@adonisjs/ignitor": "^2.0.7",
+    "@adonisjs/lucid": "^5.0.4",
+    "@adonisjs/mail": "^3.0.8",
+    "@adonisjs/redis": "^2.0.7",
+    "@adonisjs/validator": "^5.0.3",
+    "@adonisjs/websocket": "^1.0.11",
+    "adonis-scheduler": "^3.0.2",
+    "axios": "^0.18.0",
+    "bee-queue": "^1.2.2",
+    "concurrently": "^4.0.1",
+    "random-string": "^0.2.0",
+    "sqlite3": "^4.0.2"
+  },
+  "devDependencies": {},
+  "autoload": {
+    "App": "./app"
+  }
+}
