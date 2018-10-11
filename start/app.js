@@ -23,6 +23,7 @@ const providers = [
   '@adonisjs/redis/providers/RedisProvider',
   '@adonisjs/mail/providers/MailProvider',
   '@adonisjs/websocket/providers/WsProvider',
+  '@adonisjs/cors/providers/CorsProvider',
    path.join(__dirname, '..', 'providers', 'Queue/Provider')
 ]
 

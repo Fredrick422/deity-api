@@ -25,11 +25,12 @@ class StaffController {
       const staff = new Staff()
       
       //create the user
-      const user = await User.create({
+      const user = await User.create({ 
         email: values.email,
         phone: values.phone,
         is_staff: true,
-        pin: await Hash.make('0000'),
+        pin: '0000',
+        //pin: await Hash.make('0000'),
         password: values.password
       })
       

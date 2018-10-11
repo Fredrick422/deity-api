@@ -31,7 +31,8 @@ class GurdianController {
       const user = await User.create({
         email: values.email,
         phone: values.phone,
-        pin: await Hash.make('0000'),
+        pin: '0000',
+        //pin: await Hash.make('0000'),
         password: values.password
       })
       

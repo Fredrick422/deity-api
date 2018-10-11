@@ -15,6 +15,9 @@ class User extends Model {
       if (userInstance.dirty.password) {
         userInstance.password = await Hash.make(userInstance.password)
       }
+      if (userInstance.dirty.pin) {
+        userInstance.pin = await Hash.make(userInstance.pin)
+      }
     })
   }
 

@@ -356,6 +356,15 @@ Route.group(() => {
     //Auth Routes 
     Route
       .post('auth/login', 'AuthController.login')
+      .validator('AuthLogin')
+
+    Route
+      .post('auth/verify', 'AuthController.verify')
+      .validator('AuthVerify')
+
+    Route
+      .post('auth/code', 'AuthController.getcode')
+      .validator('AuthCode')
 })
 .domain('api.deity.local')
 .formats(['json'])
